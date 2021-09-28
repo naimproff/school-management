@@ -1,0 +1,56 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/student",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "42478"
+        }
+      ],
+      "UpstreamPathTemplate": "/student",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/student/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "42478"
+        }
+      ],
+      "UpstreamPathTemplate": "/student/{id}",
+      "UpstreamHttpMethod": [ "Delete", "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/teacher",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "13660"
+        }
+      ],
+      "UpstreamPathTemplate": "/teacher",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/teacher/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "13660"
+        }
+      ],
+      "UpstreamPathTemplate": "/teacher/{id}",
+      "UpstreamHttpMethod": [ "Delete", "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:65095"
+  }
+}
+
