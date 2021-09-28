@@ -38,7 +38,7 @@ namespace TeacherMicroservice.Controllers
         public void Post([FromBody] TeacherModel teacher)
         {
             _teacherRepo.AddTeacher(teacher);
-            Ok("Teacher Inserted Successfully");
+            Ok("Teacher Added Successfully");
         }
 
         // PUT api/<TeacherController>/5
